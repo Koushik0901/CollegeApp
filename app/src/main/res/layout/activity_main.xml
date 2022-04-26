@@ -24,7 +24,7 @@
         app:srcCompat="@drawable/logo_png" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/teacher_btn"
         android:layout_width="158dp"
         android:layout_height="64dp"
         android:layout_marginStart="126dp"
@@ -36,11 +36,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button1"
+        app:layout_constraintTop_toBottomOf="@+id/student_btn"
         tools:ignore="DuplicateSpeakableTextCheck" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/student_btn"
         android:layout_width="158dp"
         android:layout_height="64dp"
         android:layout_marginStart="126dp"
@@ -48,7 +48,7 @@
         android:layout_marginEnd="127dp"
         android:layout_marginBottom="23dp"
         android:text="@string/button2"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/teacher_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"

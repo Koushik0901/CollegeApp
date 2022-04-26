@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CollegeApp">
         <activity
+            android:name=".AdminLogin"
+            android:exported="false" />
+        <activity
+            android:name=".AdmitLogin"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
