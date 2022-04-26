@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">CollegeApp</string>
+    <string name="student">Button</string>
+    <string name="faculty">Button</string>
+    <string name="logo">logopng</string>
+    <string name="button1">teacher</string>
+    <string name="button2">student</string>
 </resources>

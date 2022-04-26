@@ -6,34 +6,51 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="222dp"
+        android:layout_height="210dp"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="63dp"
+        android:layout_marginBottom="345dp"
+        android:contentDescription="@string/logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.424"
+        app:srcCompat="@drawable/logo_png" />
+
     <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="158dp"
-        android:layout_marginTop="549dp"
-        android:layout_marginEnd="159dp"
-        android:layout_marginBottom="135dp"
-        android:text="Button"
+        android:id="@+id/button2"
+        android:layout_width="158dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="126dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="127dp"
+        android:layout_marginBottom="89dp"
+        android:text="@string/button1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/button1"
+        tools:ignore="DuplicateSpeakableTextCheck" />
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="159dp"
-        android:layout_marginTop="472dp"
-        android:layout_marginEnd="158dp"
-        android:layout_marginBottom="28dp"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        android:id="@+id/button1"
+        android:layout_width="158dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="126dp"
+        android:layout_marginTop="166dp"
+        android:layout_marginEnd="127dp"
+        android:layout_marginBottom="23dp"
+        android:text="@string/button2"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 </androidx.constraintlayout.widget.ConstraintLayout>
