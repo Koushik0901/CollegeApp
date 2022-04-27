@@ -8,23 +8,33 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    private Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        button = (Button) findViewById(R.id.teacher_btn);
-        button.setOnClickListener(new View.OnClickListener() {
+        Button teacher_btn = (Button) findViewById(R.id.teacher_btn);
+        Button student_btn = (Button) findViewById(R.id.student_btn);
+        teacher_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openAdmin();
+                openAdminLogin();
+            }
+        });
+        student_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openStudentLogin();
             }
         });
 
     }
-        public void openAdmin() {
+    public void openAdminLogin() {
         Intent intent = new Intent(this, AdminLogin.class);
+        startActivity(intent);
+    }
+    public void openStudentLogin() {
+        Intent intent = new Intent(this, StudentLogin.class);
         startActivity(intent);
     }
 }
