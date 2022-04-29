@@ -8,6 +8,7 @@
     <string name="login">Login</string>
     <string name="forgot_password">Forgot password?</string>
     <string name="loginbutton">LOGIN</string>
-    <string name="password">password</string>
+    <string name="DOB">DOB</string>
     <string name="username">Username</string>
+    <string name="register_number">register number</string>
 </resources>
