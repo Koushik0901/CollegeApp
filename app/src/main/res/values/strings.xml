@@ -5,4 +5,9 @@
     <string name="logo">logopng</string>
     <string name="button1">teacher</string>
     <string name="button2">student</string>
+    <string name="login">Login</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="loginbutton">LOGIN</string>
+    <string name="password">password</string>
+    <string name="username">Username</string>
 </resources>

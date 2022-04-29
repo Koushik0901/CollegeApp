@@ -11,16 +11,13 @@
         android:id="@+id/imageView5"
         android:layout_width="222dp"
         android:layout_height="210dp"
-        android:layout_marginStart="62dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginEnd="63dp"
-        android:layout_marginBottom="345dp"
         android:contentDescription="@string/logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.424"
+        app:layout_constraintVertical_bias="0.23"
         app:srcCompat="@drawable/logo_png" />
 
     <Button
@@ -30,13 +27,13 @@
         android:layout_marginStart="126dp"
         android:layout_marginTop="23dp"
         android:layout_marginEnd="127dp"
-        android:layout_marginBottom="89dp"
         android:text="@string/button1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/student_btn"
+        app:layout_constraintVertical_bias="0.035"
         tools:ignore="DuplicateSpeakableTextCheck" />
 
     <Button
@@ -44,13 +41,11 @@
         android:layout_width="158dp"
         android:layout_height="64dp"
         android:layout_marginStart="126dp"
-        android:layout_marginTop="166dp"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="127dp"
-        android:layout_marginBottom="23dp"
         android:text="@string/button2"
-        app:layout_constraintBottom_toTopOf="@+id/teacher_btn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 </androidx.constraintlayout.widget.ConstraintLayout>
