@@ -10,5 +10,5 @@
     <string name="loginbutton">LOGIN</string>
     <string name="DOB">DOB</string>
     <string name="username">Username</string>
-    <string name="register_number">register number</string>
+    <string name="Register_number">Register number</string>
 </resources>
