@@ -7,12 +7,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import io.realm.Realm;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        /* init realm */
+        Realm.init(this);
+
         Button teacher_btn = (Button) findViewById(R.id.teacher_btn);
         Button student_btn = (Button) findViewById(R.id.student_btn);
         teacher_btn.setOnClickListener(new View.OnClickListener() {

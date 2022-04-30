@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CollegeApp">
         <activity
+            android:name=".StudentHome"
+            android:exported="false" />
+        <activity
+            android:name=".AdminHome"
+            android:exported="false" />
+        <activity
             android:name=".StudentLogin"
             android:exported="false" />
         <activity
