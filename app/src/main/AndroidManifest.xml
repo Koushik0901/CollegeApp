@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CollegeApp">
         <activity
+            android:name=".uploadNotice"
+            android:exported="false" />
+        <activity
             android:name=".StudentHome"
             android:exported="false" />
         <activity

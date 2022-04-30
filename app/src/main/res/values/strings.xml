@@ -11,4 +11,13 @@
     <string name="DOB">DOB</string>
     <string name="username">Username</string>
     <string name="Register_number">Register number</string>
+    <string name="upload_notice">Upload Notice</string>
+    <string name="attendance">attendance</string>
+    <string name="mark">mark</string>
+    <string name="photo">photo</string>
+    <string name="photos">photos</string>
+    <string name="select_image">select image</string>
+    <string name="notice">notice</string>
+
+
 </resources>
