@@ -18,6 +18,10 @@
     <string name="photos">photos</string>
     <string name="select_image">select image</string>
     <string name="notice">notice</string>
+    <string name="comments">comments</string>
+    <string name="upload_attendence">upload attendance</string>
+    <string name="upload_attendance">Upload attendance</string>
+    <string name="upload_mark">Upload mark</string>
 
 
 </resources>

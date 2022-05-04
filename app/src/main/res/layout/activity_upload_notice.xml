@@ -13,7 +13,7 @@
 
 
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/insterimage"
+            android:id="@+id/insertimage"
             android:layout_width="130dp"
             android:layout_height="150dp"
             android:layout_gravity="center"
@@ -49,25 +49,26 @@
             </LinearLayout>
 
         </com.google.android.material.card.MaterialCardView>
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_marginTop="16dp"
-            android:layout_height="match_parent">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/noticeTitle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/notice" />
-        </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/UploadNoticeBtn"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="53dp"
             android:layout_marginTop="16dp"
             android:text="@string/upload_notice"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:ems="10"
+            android:hint="@string/comments"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:textAlignment="center"
+            tools:ignore="Autofill" />
     </LinearLayout>
 </ScrollView>
