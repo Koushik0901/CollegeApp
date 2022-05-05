@@ -70,5 +70,16 @@
             android:minHeight="48dp"
             android:textAlignment="center"
             tools:ignore="Autofill" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_marginTop="16dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:id="@+id/noticeImageView"/>
+        </com.google.android.material.card.MaterialCardView>
     </LinearLayout>
 </ScrollView>
