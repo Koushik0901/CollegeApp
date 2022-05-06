@@ -22,6 +22,7 @@
     <string name="upload_attendence">upload attendance</string>
     <string name="upload_attendance">Upload attendance</string>
     <string name="upload_mark">Upload mark</string>
+    <string name="feedback">feedback</string>
 
 
 </resources>
