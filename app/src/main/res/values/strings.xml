@@ -23,6 +23,9 @@
     <string name="upload_attendance">Upload attendance</string>
     <string name="upload_mark">Upload mark</string>
     <string name="feedback">feedback</string>
-
+    <string name="attendance_option">DropdownMenu</string>
+    <string name="select">Select Item</string>
+    <string name="select_item">select item</string>
+    <string name="date">date</string>
 
 </resources>
