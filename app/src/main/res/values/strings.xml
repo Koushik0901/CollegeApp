@@ -27,5 +27,10 @@
     <string name="select">Select Item</string>
     <string name="select_item">select item</string>
     <string name="date">date</string>
+    <string name="upload">upload</string>
 
+    <string-array name="attendance_array">
+        <item>Present</item>
+        <item>Absent</item>
+    </string-array>
 </resources>
