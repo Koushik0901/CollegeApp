@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#042652"
     tools:context=".uploadNotice">
 
     <LinearLayout
@@ -66,6 +67,7 @@
             android:layout_width="match_parent"
             android:layout_height="62dp"
             android:ems="10"
+            android:textColorHint="@color/white"
             android:hint="@string/comments"
             android:inputType="textPersonName"
             android:minHeight="48dp"
@@ -79,6 +81,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="#042652"
                 android:scaleType="centerCrop"
                 android:id="@+id/noticeImageView"/>
         </com.google.android.material.card.MaterialCardView>

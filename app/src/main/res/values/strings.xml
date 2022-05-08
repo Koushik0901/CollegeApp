@@ -28,6 +28,8 @@
     <string name="select_item">select item</string>
     <string name="date">date</string>
     <string name="upload">upload</string>
+    <string name="Panimalar_engineering_college">Panimalar Engineering College</string>
+    <string name="an_Autonomous_Institution">An Autonomous Institution</string>
 
     <string-array name="attendance_array">
         <item>Present</item>
