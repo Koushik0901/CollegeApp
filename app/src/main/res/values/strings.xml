@@ -30,6 +30,19 @@
     <string name="upload">upload</string>
     <string name="Panimalar_engineering_college">Panimalar Engineering College</string>
     <string name="an_Autonomous_Institution">An Autonomous Institution</string>
+    <string name="subject_6">Subject 6</string>
+    <string name="subject_2">Subject 2</string>
+    <string name="subject_3">Subject 3</string>
+    <string name="subject_4">Subject 4</string>
+    <string name="subject_5">Subject 5</string>
+    <string name="register_number">Register Number</string>
+    <string name="subject_1">Subject 1</string>
+    <string name="choose2">choose2</string>
+    <string name="choose5">choose5</string>
+    <string name="choose1">choose1</string>
+    <string name="choose4">choose4</string>
+    <string name="choose3">choose3</string>
+    <string name="choose6">choose6</string>
 
     <string-array name="attendance_array">
         <item>Present</item>
