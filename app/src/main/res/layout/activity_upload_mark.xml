@@ -9,7 +9,7 @@
 
 
     <EditText
-        android:id="@+id/editTextTextPersonName9"
+        android:id="@+id/sub6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
@@ -18,14 +18,14 @@
         android:hint="@string/subject_6"
         android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/attnSpinner5"
+        app:layout_constraintEnd_toStartOf="@+id/grade6"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.675" />
 
     <Spinner
-        android:id="@+id/attnSpinner4"
+        android:id="@+id/grade5"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_marginTop="316dp"
@@ -36,7 +36,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
-        android:id="@+id/AttnSpinner"
+        android:id="@+id/grade1"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_marginTop="80dp"
@@ -47,7 +47,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName7"
+        android:id="@+id/sub4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
@@ -56,14 +56,14 @@
         android:hint="@string/subject_4"
         android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/attnSpinner3"
+        app:layout_constraintEnd_toStartOf="@+id/grade4"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.472" />
 
     <Spinner
-        android:id="@+id/attnSpinner3"
+        android:id="@+id/grade4"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_marginTop="260dp"
@@ -74,7 +74,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
-        android:id="@+id/attnSpinner5"
+        android:id="@+id/grade6"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_marginTop="372dp"
@@ -85,7 +85,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
-        android:id="@+id/attnSpinner"
+        android:id="@+id/grade3"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_marginTop="208dp"
@@ -96,7 +96,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/sub2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
@@ -104,13 +104,13 @@
         android:ems="10"
         android:hint="@string/subject_2"
         android:minHeight="48dp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName5"
-        app:layout_constraintEnd_toStartOf="@+id/attnSpinner2"
+        app:layout_constraintBottom_toTopOf="@+id/sub3"
+        app:layout_constraintEnd_toStartOf="@+id/grade2"
         app:layout_constraintHorizontal_bias="0.076"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName6"
+        android:id="@+id/sub1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
@@ -118,13 +118,13 @@
         android:ems="10"
         android:hint="@string/subject_1"
         android:minHeight="48dp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName2"
-        app:layout_constraintEnd_toStartOf="@+id/AttnSpinner"
+        app:layout_constraintBottom_toTopOf="@+id/sub2"
+        app:layout_constraintEnd_toStartOf="@+id/grade1"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName5"
+        android:id="@+id/sub3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
@@ -132,13 +132,13 @@
         android:ems="10"
         android:hint="@string/subject_3"
         android:minHeight="48dp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName7"
-        app:layout_constraintEnd_toStartOf="@+id/attnSpinner"
+        app:layout_constraintBottom_toTopOf="@+id/sub4"
+        app:layout_constraintEnd_toStartOf="@+id/grade3"
         app:layout_constraintHorizontal_bias="0.076"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Spinner
-        android:id="@+id/attnSpinner2"
+        android:id="@+id/grade2"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_marginTop="144dp"
@@ -149,7 +149,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName8"
+        android:id="@+id/sub5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
@@ -158,7 +158,7 @@
         android:hint="@string/subject_5"
         android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/attnSpinner4"
+        app:layout_constraintEnd_toStartOf="@+id/grade5"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -166,27 +166,40 @@
         tools:ignore="Autofill" />
 
     <EditText
-        android:id="@+id/editTextNumber2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:id="@+id/gpa"
+        android:layout_width="165dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="GPA"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.804"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName9" />
+        app:layout_constraintTop_toBottomOf="@+id/sub6" />
 
     <EditText
-        android:id="@+id/editTextNumber3"
+        android:id="@+id/sem"
+        android:layout_width="165dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="SEM"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.065"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sub6" />
+
+    <EditText
+        android:id="@+id/regno"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:ems="10"
         android:hint="@string/register_number"
         android:minHeight="48dp"
-        app:layout_constraintBottom_toTopOf="@+id/AttnSpinner"
+        app:layout_constraintBottom_toTopOf="@+id/grade1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.542"
         app:layout_constraintStart_toStartOf="parent" />
@@ -200,7 +213,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber2"
+        app:layout_constraintTop_toBottomOf="@+id/gpa"
         app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -48,4 +48,13 @@
         <item>Present</item>
         <item>Absent</item>
     </string-array>
+
+    <string-array name="grade_array">
+        <item>O</item>
+        <item>A+</item>
+        <item>A</item>
+        <item>B+</item>
+        <item>B</item>
+        <item>RA</item>
+    </string-array>
 </resources>

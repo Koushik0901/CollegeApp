@@ -52,7 +52,7 @@ public class uploadAttendance extends AppCompatActivity implements OnItemSelecte
         regNoInput = (EditText) findViewById(R.id.reg_no);
         dateInput = (EditText) findViewById(R.id.enterDate);
         uploadBtn = (Button) findViewById(R.id.upload);
-        attnDropdown = (Spinner) findViewById(R.id.AttnSpinner);
+        attnDropdown = (Spinner) findViewById(R.id.attn);
 
         // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,

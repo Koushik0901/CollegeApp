@@ -23,7 +23,7 @@
         android:minHeight="48dp" />
 
     <Spinner
-        android:id="@+id/AttnSpinner"
+        android:id="@+id/attn"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_alignParentTop="true"
