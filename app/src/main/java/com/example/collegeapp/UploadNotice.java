@@ -15,7 +15,7 @@ import android.widget.ImageView;
 
 import java.io.IOException;
 
-public class uploadNotice extends AppCompatActivity {
+public class UploadNotice extends AppCompatActivity {
 
     private CardView insertimage;
     private ImageView noticeImageView;
