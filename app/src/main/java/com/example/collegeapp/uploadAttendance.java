@@ -28,7 +28,7 @@ import io.realm.mongodb.mongo.MongoDatabase;
 import io.realm.mongodb.mongo.iterable.MongoCursor;
 
 
-public class UploadAttendance extends AppCompatActivity implements OnItemSelectedListener {
+public class uploadAttendance extends AppCompatActivity implements OnItemSelectedListener {
     String appId = "application-0-pbtso";
     MongoClient mongoClient;
     MongoDatabase mongoDatabase;

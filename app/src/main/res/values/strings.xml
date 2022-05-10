@@ -57,4 +57,21 @@
         <item>B</item>
         <item>RA</item>
     </string-array>
+    <string name="col1">Subject code</string>
+    <string name="code1">Subject code1</string>
+    <string name="code2">Subject code2</string>
+    <string name="code3">Subject code3</string>
+    <string name="code4">Subject code4</string>
+    <string name="code5">Subject code5</string>
+    <string name="code6">Subject code6</string>
+
+    <string name="col2">Grade</string>
+    <string name="mark1">Grade1</string>
+    <string name="mark2">Grade2</string>
+    <string name="mark3">Grade3</string>
+    <string name="mark4">Grade4</string>
+    <string name="mark5">Grade5</string>
+    <string name="mark6">Grade6</string>
+    <string name="gpa">gpa</string>
+    <string name="GPA">GPA:</string>
 </resources>

@@ -25,7 +25,7 @@ import io.realm.mongodb.mongo.MongoCollection;
 import io.realm.mongodb.mongo.MongoDatabase;
 import io.realm.mongodb.mongo.iterable.MongoCursor;
 
-public class UploadMark extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class uploadMark extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     String appId = "application-0-pbtso";
     MongoClient mongoClient;
     MongoDatabase mongoDatabase;

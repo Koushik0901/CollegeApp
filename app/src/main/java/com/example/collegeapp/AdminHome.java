@@ -42,15 +42,15 @@ public class AdminHome extends AppCompatActivity {
         });
     }
     public void openAddNotice() {
-            Intent intent = new Intent(this, UploadNotice.class);
+            Intent intent = new Intent(this, uploadNotice.class);
             startActivity(intent);
         }
     public void openAddAttendance() {
-        Intent intent = new Intent(this, UploadAttendance.class);
+        Intent intent = new Intent(this, uploadAttendance.class);
         startActivity(intent);
     }
     public void openAddMark() {
-        Intent intent = new Intent(this, UploadMark.class);
+        Intent intent = new Intent(this, uploadMark.class);
         startActivity(intent);
     }
     }

@@ -1,0 +1,192 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_margin="50dp"
+        tools:ignore="UselessParent">
+
+
+
+        <TableRow
+            android:background="@color/colorgreen">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:padding="10sp"
+                android:text="@string/col1"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/col2"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:padding="10sp"
+                android:textSize="14sp"
+                android:layout_weight="2"
+                android:layout_gravity="center"/>
+
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/code1"
+                android:textAlignment="center"
+                android:padding="10sp"
+                android:textSize="12sp"
+                android:layout_weight="2"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/mark1"
+                android:textAlignment="center"
+                android:padding="10sp"
+                android:textSize="12sp"
+                android:layout_weight="2"
+                android:layout_gravity="center"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/code2"
+                android:textAlignment="center"
+                android:padding="10sp"
+                android:textSize="12sp"
+                android:layout_weight="2"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="@string/mark2"
+                android:padding="10sp"
+                android:textSize="12sp"
+                android:layout_weight="2"
+                android:layout_gravity="center"/>
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/code3"
+                android:textAlignment="center"
+                android:padding="10sp"
+                android:textSize="12sp"
+                android:layout_weight="2"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/mark3"
+                android:textAlignment="center"
+                android:padding="10sp"
+                android:textSize="12sp"
+                android:layout_weight="2"
+                android:layout_gravity="center"/>
+
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/code4"
+                android:textAlignment="center"
+                android:padding="10sp"
+                android:textSize="12sp"
+                android:layout_weight="2"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/mark4"
+                android:textAlignment="center"
+                android:padding="10sp"
+                android:textSize="12sp"
+                android:layout_weight="2"
+                android:layout_gravity="center"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/code5"
+                android:textAlignment="center"
+                android:padding="10sp"
+                android:textSize="12sp"
+                android:layout_weight="2"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/mark5"
+                android:textAlignment="center"
+                android:padding="10sp"
+                android:textSize="12sp"
+                android:layout_weight="2"
+                android:layout_gravity="center"/>
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/code6"
+                android:textAlignment="center"
+                android:padding="10sp"
+                android:textSize="12sp"
+                android:layout_weight="2"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/mark6"
+                android:textAlignment="center"
+                android:padding="10sp"
+                android:textSize="12sp"
+                android:layout_weight="2"
+                android:layout_gravity="center"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/GPA"
+                android:textAlignment="center"
+                android:padding="10sp"
+                android:textSize="12sp"
+                android:layout_weight="2"
+                android:layout_gravity="center_horizontal"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/gpa"
+                android:textAlignment="center"
+                android:padding="10sp"
+                android:textSize="12sp"
+                android:layout_weight="2"
+                android:layout_gravity="center_horizontal"/>
+        </TableRow>
+
+    </TableLayout>
+
+
+
+    </RelativeLayout>

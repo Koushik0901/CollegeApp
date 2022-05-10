@@ -22,13 +22,13 @@
             android:name=".ViewMark"
             android:exported="false" />
         <activity
-            android:name=".UploadMark"
+            android:name=".uploadMark"
             android:exported="false" />
         <activity
-            android:name=".UploadAttendance"
+            android:name=".uploadAttendance"
             android:exported="false" />
         <activity
-            android:name=".UploadNotice"
+            android:name=".uploadNotice"
             android:exported="false" />
         <activity
             android:name=".StudentHome"
