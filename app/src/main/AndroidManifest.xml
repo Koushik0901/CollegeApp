@@ -19,7 +19,7 @@
             android:name=".ViewAttendance"
             android:exported="false" />
         <activity
-            android:name=".ViewMark"
+            android:name=".viewMark"
             android:exported="false" />
         <activity
             android:name=".uploadMark"
