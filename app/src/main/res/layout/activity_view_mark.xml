@@ -4,18 +4,31 @@
     android:layout_height="match_parent">
 
     <TableLayout
+        android:id="@+id/tableLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
-        android:layout_margin="50dp"
+        android:layout_margin="30dp"
         tools:ignore="UselessParent">
 
 
 
         <TableRow
             android:background="@color/colorgreen">
+            <TextView
+            android:id="@+id/title1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:padding="10sp"
+            android:text="Semester"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
 
             <TextView
+                android:id="@+id/title2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -27,6 +40,7 @@
                 android:textSize="14sp" />
 
             <TextView
+                android:id="@+id/title3"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/col2"
@@ -41,6 +55,17 @@
 
         <TableRow>
             <TextView
+                android:id="@+id/sem1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="sem"
+                android:textAlignment="center"
+                android:padding="10sp"
+                android:textSize="12sp"
+                android:layout_weight="2"
+                android:layout_gravity="center"/>
+            <TextView
+                android:id="@+id/sub1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/code1"
@@ -50,6 +75,7 @@
                 android:layout_weight="2"
                 android:layout_gravity="center"/>
             <TextView
+                android:id="@+id/grade1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/mark1"
@@ -62,6 +88,17 @@
 
         <TableRow>
             <TextView
+                android:id="@+id/sem2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="sem"
+                android:textAlignment="center"
+                android:padding="10sp"
+                android:textSize="12sp"
+                android:layout_weight="2"
+                android:layout_gravity="center"/>
+            <TextView
+                android:id="@+id/sub2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/code2"
@@ -71,6 +108,7 @@
                 android:layout_weight="2"
                 android:layout_gravity="center"/>
             <TextView
+                android:id="@+id/grade2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
@@ -83,6 +121,17 @@
         </TableRow>
         <TableRow>
             <TextView
+                android:id="@+id/sem3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="sem"
+                android:textAlignment="center"
+                android:padding="10sp"
+                android:textSize="12sp"
+                android:layout_weight="2"
+                android:layout_gravity="center"/>
+            <TextView
+                android:id="@+id/sub3"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/code3"
@@ -92,6 +141,7 @@
                 android:layout_weight="2"
                 android:layout_gravity="center"/>
             <TextView
+                android:id="@+id/grade3"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/mark3"
@@ -105,6 +155,17 @@
         </TableRow>
         <TableRow>
             <TextView
+                android:id="@+id/sem4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="sem"
+                android:textAlignment="center"
+                android:padding="10sp"
+                android:textSize="12sp"
+                android:layout_weight="2"
+                android:layout_gravity="center"/>
+            <TextView
+                android:id="@+id/sub4"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/code4"
@@ -114,6 +175,7 @@
                 android:layout_weight="2"
                 android:layout_gravity="center"/>
             <TextView
+                android:id="@+id/grade4"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/mark4"
@@ -125,6 +187,17 @@
         </TableRow>
         <TableRow>
             <TextView
+                android:id="@+id/sem5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="sem"
+                android:textAlignment="center"
+                android:padding="10sp"
+                android:textSize="12sp"
+                android:layout_weight="2"
+                android:layout_gravity="center"/>
+            <TextView
+                android:id="@+id/sub5"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/code5"
@@ -134,6 +207,7 @@
                 android:layout_weight="2"
                 android:layout_gravity="center"/>
             <TextView
+                android:id="@+id/grade5"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/mark5"
@@ -146,6 +220,17 @@
         </TableRow>
         <TableRow>
             <TextView
+                android:id="@+id/sem6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="sem"
+                android:textAlignment="center"
+                android:padding="10sp"
+                android:textSize="12sp"
+                android:layout_weight="2"
+                android:layout_gravity="center"/>
+            <TextView
+                android:id="@+id/sub6"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/code6"
@@ -155,6 +240,7 @@
                 android:layout_weight="2"
                 android:layout_gravity="center"/>
             <TextView
+                android:id="@+id/grade6"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/mark6"
@@ -175,6 +261,7 @@
                 android:layout_weight="2"
                 android:layout_gravity="center_horizontal"/>
             <TextView
+                android:id="@+id/gpa"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/gpa"
@@ -189,4 +276,4 @@
 
 
 
-    </RelativeLayout>
+</RelativeLayout>
