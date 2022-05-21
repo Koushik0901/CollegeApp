@@ -74,4 +74,6 @@
     <string name="mark6">Grade6</string>
     <string name="gpa">gpa</string>
     <string name="GPA">GPA:</string>
+    <string name="student_name">student name</string>
+    <string name="your_attendance">Your attendance</string>
 </resources>
