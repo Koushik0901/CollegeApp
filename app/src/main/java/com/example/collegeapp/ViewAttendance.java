@@ -2,6 +2,7 @@ package com.example.collegeapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ProgressBar;
@@ -34,7 +35,7 @@ public class ViewAttendance extends AppCompatActivity {
 
     ProgressBar AttnProgress;
     TextView DisplayPresent, DisplayAbsent, DisplayTotal, ProgressText;
-    int progress = 0;
+    float progress = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,7 +54,8 @@ public class ViewAttendance extends AppCompatActivity {
         mongoDatabase = mongoClient.getDatabase("CollegeData");
         mongoCollection = mongoDatabase.getCollection("Attendance");
 
-        String reg_no = "211419104143";
+        String reg_no = user.getProfile().getEmail();
+        Log.v("name", "" + reg_no);
         // create a document for find query
         Document queryFilter = new Document("reg_no", reg_no);
         // init a mongo collection find task
@@ -62,6 +64,7 @@ public class ViewAttendance extends AppCompatActivity {
         getAttendance(findTask);
     }
 
+    @SuppressLint("SetTextI18n")
     private void getAttendance(RealmResultTask<MongoCursor<Document>> findTask) {
         findTask.getAsync(task -> {
             if (task.isSuccess()) {
@@ -78,10 +81,12 @@ public class ViewAttendance extends AppCompatActivity {
                     }
                     int num_absent = date_absent.size();
                     int num_present = date_present.size();
-                    int total_days = num_present + num_absent;
-                    progress = num_present / total_days;
-                    updateProgressBar(progress);
-                    DisplayTotal.setText("Number of working days: " + total_days);
+                    float total_days = (float) num_present + num_absent;
+                    progress = (float) ((num_present / total_days) * 100);
+                    Log.v("present", "" + date_present.toString() + "total " + total_days + num_present + num_absent);
+                    Log.v("absent", "" + date_absent.toString() + "progress " + progress);
+                    updateProgressBar((int) progress);
+                    DisplayTotal.setText("Number of working days: " + (int) total_days);
                     DisplayPresent.setText("Number of days present: " + num_present);
                     DisplayAbsent.setText("Number of days absent: " + num_absent);
                 }
@@ -90,6 +95,6 @@ public class ViewAttendance extends AppCompatActivity {
     }
     private void updateProgressBar(int progress) {
         AttnProgress.setProgress(progress);
-        ProgressText.setText(String.valueOf(progress));
+        ProgressText.setText(String.valueOf(progress) + "%");
     }
 }
