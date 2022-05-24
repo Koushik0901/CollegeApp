@@ -139,7 +139,7 @@
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/image"
+            android:id="@+id/viewFeedback"
             android:layout_width="130dp"
             android:layout_height="150dp"
             android:layout_margin="10dp"

@@ -159,7 +159,8 @@ public class uploadAttendance extends AppCompatActivity implements OnItemSelecte
                                 }
                             });
                         }
-                    } else {
+                    }
+                    else {
                         Log.v("Error", task.getError().toString());
                     }
                 });

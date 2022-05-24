@@ -1,89 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#042652"
-    tools:context=".uploadNotice">
+    android:layout_height="match_parent">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="374dp"
+        android:layout_height="144dp"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="sample notice"
+        android:textAlignment="center"
+        tools:layout_editor_absoluteX="21dp"
+        tools:layout_editor_absoluteY="97dp" />
+
+    <Button
+        android:id="@+id/uploadBtn"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/insertimage"
-            android:layout_width="130dp"
-            android:layout_height="150dp"
-            android:layout_gravity="center"
-            android:layout_margin="10dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:background="#ADD8E6"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    android:background="#ADD8E6"
-                    android:src="@drawable/ic_baseline_add_photo_alternate_24"
-                    tools:ignore="ContentDescription" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@color/black" />
-
-                <TextView
-                    android:id="@+id/pickedImage"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:padding="5dp"
-                    android:text="@string/select_image"
-                    android:textStyle="bold" />
-            </LinearLayout>
-
-        </com.google.android.material.card.MaterialCardView>
-
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/UploadNoticeBtn"
-            android:layout_width="match_parent"
-            android:layout_height="53dp"
-            android:layout_marginTop="16dp"
-            android:text="@string/upload_notice"
-            android:textAllCaps="false"
-            />
-
-        <EditText
-            android:id="@+id/editTextTextPersonName"
-            android:layout_width="match_parent"
-            android:layout_height="62dp"
-            android:ems="10"
-            android:textColorHint="@color/white"
-            android:hint="@string/comments"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:textAlignment="center"
-            tools:ignore="Autofill" />
-
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="match_parent"
-            android:layout_height="400dp"
-            android:layout_marginTop="16dp">
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#042652"
-                android:scaleType="centerCrop"
-                android:id="@+id/noticeImageView"/>
-        </com.google.android.material.card.MaterialCardView>
-    </LinearLayout>
-</ScrollView>
+        android:layout_marginTop="124dp"
+        android:layout_weight="1"
+        android:text="submit"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+</androidx.constraintlayout.widget.ConstraintLayout>

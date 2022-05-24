@@ -36,15 +36,13 @@ public class AdminHome extends AppCompatActivity {
         });
         uploadMark.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                openAddMark();
-            }
+            public void onClick(View view) { openAddMark(); }
         });
     }
     public void openAddNotice() {
-            Intent intent = new Intent(this, uploadNotice.class);
-            startActivity(intent);
-        }
+        Intent intent = new Intent(this, uploadNotice.class);
+        startActivity(intent);
+    }
     public void openAddAttendance() {
         Intent intent = new Intent(this, uploadAttendance.class);
         startActivity(intent);

@@ -1,60 +1,98 @@
 package com.example.collegeapp;
-
-import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-
-import android.content.Intent;
-import android.graphics.Bitmap;
-import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
-import android.widget.ImageView;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
-import java.io.IOException;
+import org.bson.Document;
+
+import java.util.ArrayList;
+
+import io.realm.mongodb.App;
+import io.realm.mongodb.AppConfiguration;
+import io.realm.mongodb.RealmResultTask;
+import io.realm.mongodb.User;
+import io.realm.mongodb.mongo.MongoClient;
+import io.realm.mongodb.mongo.MongoCollection;
+import io.realm.mongodb.mongo.MongoDatabase;
+import io.realm.mongodb.mongo.iterable.MongoCursor;
+
 
 public class uploadNotice extends AppCompatActivity {
 
-    private CardView insertimage;
-    private ImageView noticeImageView;
-
-    private final int REQ = 1;
-    private Bitmap bitmap;
+    String appId = "application-0-pbtso";
+    MongoClient mongoClient;
+    MongoDatabase mongoDatabase;
+    User user;
+    App app;
+    MongoCollection<Document> mongoCollection;
+    Button uploadBtn;
+    EditText text;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_upload_notice);
+        app = new App(new AppConfiguration.Builder(appId).build());
 
-        insertimage = findViewById(R.id.insertimage);
-        noticeImageView = findViewById(R.id.noticeImageView);
+        uploadBtn = (Button) findViewById(R.id.uploadBtn);
+        text = (EditText) findViewById(R.id.editTextTextPersonName);
 
-        insertimage.setOnClickListener(new View.OnClickListener() {
+        user = app.currentUser();
+        Log.v("AUTH", user + " " + user.getId());
+        mongoClient = user.getMongoClient("mongodb-atlas");
+        mongoDatabase = mongoClient.getDatabase("CollegeData");
+        mongoCollection = mongoDatabase.getCollection("Attendance");
+
+        uploadBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openGallery();
+                String notice = text.getText().toString();
+                // create a document for find query
+                Document queryFilter = new Document("notice", notice);
+                // init a mongo collection find task
+                RealmResultTask<MongoCursor<Document>> findTask = mongoCollection.find(queryFilter).iterator();
+                findTask.getAsync(task -> {
+                    if (task.isSuccess()) {
+                        MongoCursor<Document> results = task.get();
+                        // check if the document already exists
+                        if (results.hasNext()) {
+                            Log.v("Find", "Found something");
+                            Document result = results.next();
+                            Toast.makeText(getApplicationContext(), "Already Exists", Toast.LENGTH_LONG).show();
+                            // update the result
+                            result.append("notice", notice);
+                            mongoCollection.updateOne(queryFilter, result).getAsync(updateResult -> {
+                                if (updateResult.isSuccess()) {
+                                    Log.v("Update", "Update successful");
+                                    Toast.makeText(getApplicationContext(), "Update Successful", Toast.LENGTH_LONG).show();
+                                } else {
+                                    Log.v("Update", updateResult.getError().toString());
+                                }
+                            });
+                        }
+                        // if not then insert a new document into the mongodb collection
+                        else {
+                            // insert a document to the collection
+                            mongoCollection.insertOne(
+                                    new Document("notice", notice)
+                            ).getAsync(result -> {
+                                if (result.isSuccess()) {
+                                    Log.v("Insert", "Insert successful");
+                                    Toast.makeText(getApplicationContext(), "Insert Successful", Toast.LENGTH_LONG).show();
+                                } else {
+                                    Log.v("Insert", result.getError().toString());
+                                }
+                            });
+                        }
+                    } else {
+                        Log.v("Error", task.getError().toString());
+                    }
+                });
             }
         });
-
-        }
-        private void openGallery() {
-            Intent pickImage = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-            startActivityForResult(pickImage,REQ);
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode == REQ && resultCode == RESULT_OK){
-            Uri uri = data.getData();
-            try {
-                bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(),uri);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            noticeImageView.setImageBitmap(bitmap);
-        }
     }
 }
