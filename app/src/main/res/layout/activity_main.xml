@@ -21,14 +21,17 @@
         app:layout_constraintVertical_bias="0.88"
         app:srcCompat="@drawable/logo_png" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/teacher_btn"
         android:layout_width="0dp"
-        android:layout_height="64dp"
+        android:layout_height="54dp"
         android:layout_marginStart="129dp"
         android:layout_marginTop="88dp"
         android:layout_marginEnd="124dp"
         android:text="@string/button1"
+        android:background="@drawable/roundedbutton"
+        app:backgroundTint="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -37,14 +40,17 @@
         app:layout_constraintVertical_bias="0.68"
         tools:ignore="DuplicateSpeakableTextCheck" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/student_btn"
         android:layout_width="0dp"
-        android:layout_height="64dp"
+        android:layout_height="54dp"
         android:layout_marginStart="129dp"
         android:layout_marginTop="88dp"
         android:layout_marginEnd="124dp"
         android:text="@string/button2"
+        android:background="@drawable/roundedbutton"
+        app:backgroundTint="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
