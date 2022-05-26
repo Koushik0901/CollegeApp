@@ -76,4 +76,9 @@
     <string name="GPA">GPA:</string>
     <string name="student_name">student name</string>
     <string name="your_attendance">Your attendance</string>
+    <string name="placement">Placement</string>
+    <string name="important">Important</string>
+    <string name="casual">Casual</string>
+    <string name="gpaHint">GPA</string>
+    <string name="semHint">SEM</string>
 </resources>

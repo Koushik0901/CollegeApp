@@ -8,7 +8,7 @@
         be false for the ring to appear with color code "#DDD"-->
         <shape
             android:shape="ring"
-            android:thicknessRatio="16"
+            android:thicknessRatio="10"
             android:useLevel="false">
             <solid android:color="#DDD" />
         </shape>
@@ -17,14 +17,14 @@
     <item>
         <!--Rotation degree of Ring is made from 270 to 270-->
         <rotate
-            android:fromDegrees="270"
-            android:toDegrees="270">
+            android:fromDegrees="0"
+            android:toDegrees="0">
             <!--The main attribute used here is android:useLevel="true" in
             shape tag. Also gradient is added to set the startColor and
             endColor of the ring.-->
             <shape
                 android:shape="ring"
-                android:thicknessRatio="16"
+                android:thicknessRatio="10"
                 android:useLevel="true">
                 <gradient
                     android:endColor="@color/teal_700"

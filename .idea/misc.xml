@@ -3,12 +3,23 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/circle.xml" value="0.2975" />
+        <entry key="app/src/main/res/drawable/ic_attendance.xml" value="0.2975" />
+        <entry key="app/src/main/res/drawable/ic_baseline_info_24.xml" value="0.2975" />
+        <entry key="app/src/main/res/drawable/ic_baseline_person_outline_24.xml" value="0.2975" />
+        <entry key="app/src/main/res/drawable/ic_feedback.xml" value="0.2975" />
+        <entry key="app/src/main/res/drawable/ic_notice.xml" value="0.2975" />
         <entry key="app/src/main/res/drawable/rounded_login_button.xml" value="0.2975" />
         <entry key="app/src/main/res/drawable/roundedbutton.xml" value="0.1445" />
+        <entry key="app/src/main/res/layout/activity_admin_home.xml" value="0.2984375" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.2984375" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2984375" />
+        <entry key="app/src/main/res/layout/activity_student_home.xml" value="0.2984375" />
+        <entry key="app/src/main/res/layout/activity_upload_attendance.xml" value="0.2984375" />
         <entry key="app/src/main/res/layout/activity_upload_mark.xml" value="0.2984375" />
         <entry key="app/src/main/res/layout/activity_upload_notice.xml" value="0.2984375" />
+        <entry key="app/src/main/res/layout/activity_view_attendance.xml" value="0.2984375" />
+        <entry key="app/src/main/res/layout/activity_view_notice.xml" value="0.25" />
       </map>
     </option>
   </component>

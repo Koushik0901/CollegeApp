@@ -11,7 +11,8 @@ import android.widget.Toast;
 
 import org.bson.Document;
 
-import java.util.ArrayList;
+
+import java.util.Date;
 
 import io.realm.mongodb.App;
 import io.realm.mongodb.AppConfiguration;
@@ -41,7 +42,6 @@ public class uploadNotice extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_upload_notice);
-        app = new App(new AppConfiguration.Builder(appId).build());
 
         uploadBtn = (Button) findViewById(R.id.uploadBtn);
         NoticeInput = (EditText) findViewById(R.id.addNotice);
@@ -49,10 +49,11 @@ public class uploadNotice extends AppCompatActivity {
         radioGroup = (RadioGroup) findViewById(R.id.RadioGroup);
 
         radioGroup.setOnCheckedChangeListener((group, checkedId) -> {
-                    RadioButton radioButton = (RadioButton) group.findViewById(checkedId);
+            RadioButton radioButton = (RadioButton) group.findViewById(checkedId);
         });
 
 
+        app = new App(new AppConfiguration.Builder(appId).build());
         user = app.currentUser();
         Log.v("AUTH", user + " " + user.getId());
         mongoClient = user.getMongoClient("mongodb-atlas");
@@ -64,6 +65,7 @@ public class uploadNotice extends AppCompatActivity {
             public void onClick(View view) {
                 String notice = NoticeInput.getText().toString();
                 String title = TitleInput.getText().toString();
+                Date date = new Date();
 
                 int selectedId = radioGroup.getCheckedRadioButtonId();
                 if (selectedId == -1) {
@@ -86,7 +88,7 @@ public class uploadNotice extends AppCompatActivity {
                             Document result = results.next();
                             Toast.makeText(getApplicationContext(), "Already Exists", Toast.LENGTH_LONG).show();
                             // update the result
-                            result.append("title", title).append("notice", notice).append("category", category);
+                            result.append("title", title).append("notice", notice).append("category", category).append("date", date);
                             mongoCollection.updateOne(queryFilter, result).getAsync(updateResult -> {
                                 if (updateResult.isSuccess()) {
                                     Log.v("Update", "Update successful");
@@ -100,7 +102,7 @@ public class uploadNotice extends AppCompatActivity {
                         else {
                             // insert a document to the collection
                             mongoCollection.insertOne(
-                                    new Document("user_id", user.getId()).append("title", title).append("notice", notice).append("category", category)
+                                    new Document("user_id", user.getId()).append("title", title).append("notice", notice).append("category", category).append("date", date)
                             ).getAsync(result -> {
                                 if (result.isSuccess()) {
                                     Log.v("Insert", "Insert successful");
