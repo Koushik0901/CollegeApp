@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".uploadAttendance">
 
@@ -15,12 +16,14 @@
         android:layout_centerHorizontal="true"
         android:layout_marginStart="-1dp"
         android:layout_marginTop="85dp"
+        android:backgroundTint="@color/black"
+        android:drawableStart="@drawable/ic_baseline_person_outline_24"
+        android:drawablePadding="10sp"
         android:ems="10"
         android:hint="@string/Register_number"
         android:inputType="number"
         android:minHeight="48dp"
-        android:drawableStart="@drawable/ic_baseline_person_outline_24"
-        android:drawablePadding="10sp"
+        android:textColor="@color/black"
         android:textColorHint="@color/primary" />
 
     <Spinner
@@ -29,6 +32,7 @@
         android:layout_height="48dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
         android:layout_marginTop="264dp"
         android:background="@android:drawable/btn_dropdown"
         android:contentDescription="@string/select" />
@@ -54,16 +58,18 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/black"
         android:layout_marginTop="154dp"
         android:layout_marginEnd="2dp"
+        android:drawableStart="@drawable/ic_notice"
+        android:drawablePadding="10sp"
         android:ems="10"
         android:hint="@string/date"
         android:inputType="date"
         android:minHeight="48dp"
+        android:textColor="@color/black"
         android:textColorHint="@color/primary"
         android:visibility="visible"
-        android:drawableStart="@drawable/ic_notice"
-        android:drawablePadding="10sp"
         tools:visibility="visible" />
 
 </RelativeLayout>
