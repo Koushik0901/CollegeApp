@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.collegeapp">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,6 +12,36 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CollegeApp">
+        <activity
+            android:name=".ViewNotice"
+            android:exported="false" />
+        <activity
+            android:name=".ViewAttendance"
+            android:exported="false" />
+        <activity
+            android:name=".viewMark"
+            android:exported="false" />
+        <activity
+            android:name=".uploadMark"
+            android:exported="false" />
+        <activity
+            android:name=".uploadAttendance"
+            android:exported="false" />
+        <activity
+            android:name=".uploadNotice"
+            android:exported="false" />
+        <activity
+            android:name=".StudentHome"
+            android:exported="false" />
+        <activity
+            android:name=".AdminHome"
+            android:exported="false" />
+        <activity
+            android:name=".StudentLogin"
+            android:exported="false" />
+        <activity
+            android:name=".AdminLogin"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
