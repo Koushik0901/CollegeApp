@@ -6,19 +6,18 @@ import androidx.core.content.ContextCompat;
 
 import android.content.Context;
 import android.widget.LinearLayout.LayoutParams;
-import android.content.res.ColorStateList;
+
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.ViewGroup;
+
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.android.material.chip.Chip;
 
 import org.bson.Document;
-import org.w3c.dom.Text;
 
 import java.util.Arrays;
 import java.util.List;

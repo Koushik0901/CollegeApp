@@ -4,11 +4,13 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:background="@color/white"
     tools:context=".AdminHome">
 
 
     <LinearLayout
         android:layout_width="match_parent"
+        android:background="@color/white"
         android:layout_height="269dp"
         android:layout_margin="5dp"
         android:gravity="center"
@@ -97,6 +99,7 @@
         android:layout_height="317dp"
         android:layout_margin="5dp"
         android:gravity="center"
+        android:background="@color/white"
         android:orientation="horizontal">
 
         <com.google.android.material.card.MaterialCardView
