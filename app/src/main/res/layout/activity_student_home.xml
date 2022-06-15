@@ -12,11 +12,11 @@
         android:id="@+id/linearLayout"
         android:layout_width="296dp"
         android:layout_height="159dp"
-        android:layout_margin="5dp"
+        android:layout_marginTop="30dp"
         android:background="@color/white"
         android:gravity="center"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/user_reg"
+        app:layout_constraintTop_toBottomOf="@+id/username"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -155,33 +155,18 @@
 
     <TextView
         android:id="@+id/username"
-        android:layout_width="244dp"
-        android:layout_height="44dp"
-        android:layout_marginBottom="12dp"
-        android:text="S. Koushik"
-        android:textColor="@color/black"
-        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:gravity="center"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        app:layout_constraintBottom_toTopOf="@+id/user_reg"
+        android:text="Welcome"
+        android:textStyle="bold"
+        android:textColor="@color/primary"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/user_reg"
-        android:layout_width="244dp"
-        android:layout_height="44dp"
-        android:layout_marginBottom="16dp"
-        android:text="211419104143"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        android:gravity="center"
-        app:layout_constraintTop_toBottomOf="@+id/username"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <ImageView
         android:id="@+id/imageView3"

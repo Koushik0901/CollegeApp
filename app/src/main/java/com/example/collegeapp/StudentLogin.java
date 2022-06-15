@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -33,12 +32,11 @@ public class StudentLogin extends AppCompatActivity {
         login = (Button) findViewById(R.id.loginbtn);
         App app = new App(new AppConfiguration.Builder(appId).build());
 
-        login.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                String reg_no = reg_input.getText().toString();
-                String passwd = passwd_input.getText().toString();
+        login.setOnClickListener(v -> {
+            String reg_no = reg_input.getText().toString();
+            String passwd = passwd_input.getText().toString();
 
-
+            if (validateData(reg_no, passwd)) {
                 Credentials emailPasswordCredentials = Credentials.emailPassword(reg_no, passwd);
                 AtomicReference<User> user = new AtomicReference<User>();
                 app.loginAsync(emailPasswordCredentials, it -> {
@@ -54,12 +52,21 @@ public class StudentLogin extends AppCompatActivity {
                                 .show();
                     }
                 });
-
             }
+            else {
+                Toast.makeText(getApplicationContext(),
+                               "Please enter valid details!!",
+                               Toast.LENGTH_LONG)
+                        .show();
+            }
+
         });
     }
     public void openStudentHome() {
         Intent intent = new Intent(this, StudentHome.class);
         startActivity(intent);
+    }
+    public boolean validateData(String reg_no, String passwd) {
+        return !reg_no.isEmpty() && !passwd.isEmpty();
     }
 }

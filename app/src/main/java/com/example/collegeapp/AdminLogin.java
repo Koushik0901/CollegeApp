@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.Objects;
 import java.util.concurrent.atomic.AtomicReference;
 
 import io.realm.mongodb.App;
@@ -42,11 +43,11 @@ public class AdminLogin extends AppCompatActivity {
 //            }
 //        });
 
-        login.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                String reg_no = reg_input.getText().toString();
-                String passwd = passwd_input.getText().toString();
+        login.setOnClickListener(v -> {
+            String reg_no = reg_input.getText().toString();
+            String passwd = passwd_input.getText().toString();
 
+            if (validateData(reg_no, passwd)) {
 
                 Credentials emailPasswordCredentials = Credentials.emailPassword(reg_no, passwd);
                 AtomicReference<User> user = new AtomicReference<User>();
@@ -59,12 +60,17 @@ public class AdminLogin extends AppCompatActivity {
                         Log.e("AUTH", it.getError().toString());
                         Log.e("AUTH", it.getError().toString());
                         Toast.makeText(getApplicationContext(),
-                                "Please enter valid details!!",
-                                Toast.LENGTH_LONG)
+                                       "Please enter valid details!!",
+                                       Toast.LENGTH_LONG)
                                 .show();
                     }
                 });
-
+            }
+            else {
+                Toast.makeText(getApplicationContext(),
+                               "Please enter valid details!!",
+                               Toast.LENGTH_LONG)
+                        .show();
             }
         });
     }
@@ -72,5 +78,9 @@ public class AdminLogin extends AppCompatActivity {
     public void openAdminHome() {
         Intent intent = new Intent(this, AdminHome.class);
         startActivity(intent);
+    }
+
+    public boolean validateData(String reg_no, String passwd) {
+        return !reg_no.isEmpty() && !passwd.isEmpty();
     }
 }
