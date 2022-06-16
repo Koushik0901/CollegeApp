@@ -39,6 +39,7 @@
         app:layout_constraintEnd_toEndOf="@+id/progress_bar"
         app:layout_constraintStart_toStartOf="@+id/progress_bar"
         app:layout_constraintTop_toTopOf="@+id/progress_bar"
+        android:textColor="@color/black"
         tools:text="60%" />
 
     <TextView
@@ -63,6 +64,7 @@
         android:layout_height="47dp"
         android:layout_marginTop="52dp"
         android:textColor="@color/black"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/absent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -76,6 +78,7 @@
         android:layout_height="47dp"
         android:layout_marginBottom="36dp"
         android:textColor="@color/black"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/total"
         app:layout_constraintEnd_toEndOf="@+id/present"
         app:layout_constraintHorizontal_bias="0.0"
@@ -86,6 +89,7 @@
         android:layout_width="296dp"
         android:layout_height="47dp"
         android:textColor="@color/black"
+        android:textSize="18sp"
         android:layout_marginStart="57dp"
         android:layout_marginTop="514dp"
         android:layout_marginEnd="58dp"

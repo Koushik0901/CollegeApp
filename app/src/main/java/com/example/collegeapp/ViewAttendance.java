@@ -86,7 +86,7 @@ public class ViewAttendance extends AppCompatActivity {
                     Log.v("present", "" + date_present.toString() + "total " + total_days + num_present + num_absent);
                     Log.v("absent", "" + date_absent.toString() + "progress " + progress);
                     updateProgressBar((int) progress);
-                    DisplayTotal.setText("Number of working days: " + (int) total_days);
+                    DisplayTotal.setText("Total Number of working days: " + (int) total_days);
                     DisplayPresent.setText("Number of days present: " + num_present);
                     DisplayAbsent.setText("Number of days absent: " + num_absent);
                 }
