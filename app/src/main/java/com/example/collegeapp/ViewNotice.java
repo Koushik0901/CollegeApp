@@ -5,6 +5,8 @@ import androidx.cardview.widget.CardView;
 import androidx.core.content.ContextCompat;
 
 import android.content.Context;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import android.widget.LinearLayout.LayoutParams;
 
 import android.graphics.Color;
@@ -20,6 +22,7 @@ import com.google.android.material.chip.Chip;
 import org.bson.Document;
 
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 import io.realm.mongodb.App;
@@ -75,22 +78,15 @@ public class ViewNotice extends AppCompatActivity {
                 while (results.hasNext()) {
                     if (i[0] < 10) {
                         Document NoticeData = results.next();
-                        thread = new Thread(new Runnable() {
-                            @Override
-                            public void run() {
-                                runOnUiThread(new Runnable() {
-                                    @Override
-                                    public void run() {
-                                        CardView noticeCard = createCard(
-                                                NoticeData.get("title").toString(),
-                                                NoticeData.get("notice").toString(),
-                                                NoticeData.get("category").toString()
-                                        );
-                                        linearLayout.addView(noticeCard);
-                                    }
-                                });
-                            }
-                        });
+                        thread = new Thread(() -> runOnUiThread(() -> {
+                            CardView noticeCard = createCard(
+                                    NoticeData.get("title").toString(),
+                                    NoticeData.get("notice").toString(),
+                                    NoticeData.get("category").toString(),
+                                    (Date) NoticeData.get("date")
+                            );
+                            linearLayout.addView(noticeCard);
+                        }));
                         thread.start();
                         thread.setPriority(Thread.MAX_PRIORITY);
                         Log.v("EXAMPLE", NoticeData.toString() + " " + i[0]);
@@ -107,7 +103,18 @@ public class ViewNotice extends AppCompatActivity {
         });
     }
 
-    private CardView createCard(String title, String content, String category) {
+    private CardView createCard(String title, String content, String category, Date date) {
+        DateFormat dateFormat = new SimpleDateFormat("dd-mm-yyyy hh:mm:ss");
+        String strDate = dateFormat.format(date);
+        Log.v("date", "" + strDate);
+        int color = R.color.primary;
+        if (category.equals("Placement")) {
+            color = R.color.teal_700;
+        }
+        else if (category.equals("Important")) {
+            color = R.color.red;
+        }
+
         // Notice Card
         Context context = getApplicationContext();
         CardView noticeCard = new CardView(context);
@@ -138,12 +145,25 @@ public class ViewNotice extends AppCompatActivity {
                 LayoutParams.MATCH_PARENT,
                 LayoutParams.WRAP_CONTENT
         );
-        tv1Params.setMargins(20, 15, 20, 25);
+        tv1Params.setMargins(20, 15, 20, 10);
         titleTV.setLayoutParams(tv1Params);
         titleTV.setText(title);
         titleTV.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.primary));
-        titleTV.setTextSize(18);
+        titleTV.setTextSize(22);
         titleTV.setTypeface(null, Typeface.BOLD);
+
+        // Content of the notice
+        TextView dateTV = new TextView(context);
+        LayoutParams dateParams = new LayoutParams(
+                LayoutParams.WRAP_CONTENT,
+                LayoutParams.WRAP_CONTENT
+        );
+        dateParams.setMargins(20, 5, 20, 15);
+        dateTV.setLayoutParams(dateParams);
+        dateTV.setText(strDate);
+        dateTV.setTextColor(Color.DKGRAY);
+        dateTV.setTextSize(12);
+        dateTV.setTypeface(null, Typeface.NORMAL);
 
         // Content of the notice
         TextView contentTV = new TextView(context);
@@ -155,7 +175,7 @@ public class ViewNotice extends AppCompatActivity {
         contentTV.setLayoutParams(tv2Params);
         contentTV.setText(content);
         contentTV.setTextColor(Color.BLACK);
-        contentTV.setTextSize(16);
+        contentTV.setTextSize(18);
         contentTV.setTypeface(null, Typeface.ITALIC);
 
         // Chip
@@ -166,12 +186,13 @@ public class ViewNotice extends AppCompatActivity {
         );
         chipParams.setMargins(20, 15, 20, 15);
         categoryChip.setLayoutParams(chipParams);
-        categoryChip.setChipBackgroundColorResource(R.color.primary);
+        categoryChip.setChipBackgroundColorResource(color);
         categoryChip.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.white));
         categoryChip.setText(category);
 
 
         cardLinearLayout.addView(titleTV);
+        cardLinearLayout.addView(dateTV);
         cardLinearLayout.addView(contentTV);
         cardLinearLayout.addView(categoryChip);
 
