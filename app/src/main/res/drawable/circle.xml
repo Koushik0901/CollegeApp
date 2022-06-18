@@ -8,9 +8,9 @@
         be false for the ring to appear with color code "#DDD"-->
         <shape
             android:shape="ring"
-            android:thicknessRatio="10"
+            android:thicknessRatio="6"
             android:useLevel="false">
-            <solid android:color="#DDD" />
+            <solid android:color="#cee2fd" />
         </shape>
     </item>
     <!--Adding our second item-->
@@ -24,11 +24,11 @@
             endColor of the ring.-->
             <shape
                 android:shape="ring"
-                android:thicknessRatio="10"
+                android:thicknessRatio="6"
                 android:useLevel="true">
                 <gradient
-                    android:endColor="@color/teal_700"
-                    android:startColor="@color/black"
+                    android:endColor="@color/primary"
+                    android:startColor="@color/primary"
                     android:type="sweep" />
 
             </shape>

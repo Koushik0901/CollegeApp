@@ -42,9 +42,9 @@ public class ViewAttendance extends AppCompatActivity {
         setContentView(R.layout.activity_view_attendance);
         AttnProgress = findViewById(R.id.progress_bar);
         ProgressText = findViewById(R.id.text_view_progress);
-        DisplayPresent = findViewById(R.id.present);
-        DisplayAbsent = findViewById(R.id.absent);
-        DisplayTotal = findViewById(R.id.total);
+        DisplayPresent = findViewById(R.id.totalPresent);
+        DisplayAbsent = findViewById(R.id.totalAbsent);
+        DisplayTotal = findViewById(R.id.totalDays);
 
         // connect to MongoDB
         app = new App(new AppConfiguration.Builder(appId).build());
@@ -86,15 +86,19 @@ public class ViewAttendance extends AppCompatActivity {
                     Log.v("present", "" + date_present.toString() + "total " + total_days + num_present + num_absent);
                     Log.v("absent", "" + date_absent.toString() + "progress " + progress);
                     updateProgressBar((int) progress);
-                    DisplayTotal.setText("Total Number of working days: " + (int) total_days);
-                    DisplayPresent.setText("Number of days present: " + num_present);
-                    DisplayAbsent.setText("Number of days absent: " + num_absent);
+                    DisplayTotal.setText("" + (int) total_days);
+                    DisplayPresent.setText("" + num_present);
+                    DisplayAbsent.setText("" + num_absent);
+                }
+                else {
+                    Toast.makeText(getApplicationContext(), "No records found :(", Toast.LENGTH_LONG).show();
                 }
             }
         });
     }
     private void updateProgressBar(int progress) {
         AttnProgress.setProgress(progress);
-        ProgressText.setText(String.valueOf(progress) + "%");
+        Log.v("progress", "" + progress);
+        ProgressText.setText(progress + "%");
     }
 }
