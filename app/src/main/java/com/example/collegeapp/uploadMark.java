@@ -113,23 +113,6 @@ public class uploadMark extends AppCompatActivity implements AdapterView.OnItemS
                 sub5 = Sub5.getText().toString();
                 sub6 = Sub6.getText().toString();
 
-//                subject_codes = new ArrayList<>();
-//                subject_codes.add(sub1);
-//                subject_codes.add(sub2);
-//                subject_codes.add(sub3);
-//                subject_codes.add(sub4);
-//                subject_codes.add(sub5);
-//                subject_codes.add(sub6);
-//
-//
-//                grades = new ArrayList<>();
-//                grades.add(String.valueOf(Grade1.getSelectedItem()));
-//                grades.add(String.valueOf(Grade2.getSelectedItem()));
-//                grades.add(String.valueOf(Grade3.getSelectedItem()));
-//                grades.add(String.valueOf(Grade4.getSelectedItem()));
-//                grades.add(String.valueOf(Grade5.getSelectedItem()));
-//                grades.add(String.valueOf(Grade6.getSelectedItem()));
-
 
                 Document Marks = new Document(sub1, Grade1.getSelectedItem())
                         .append(sub2, Grade2.getSelectedItem())

@@ -64,7 +64,7 @@
         android:layout_height="80dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:backgroundTint="#cee2fd"
+        android:backgroundTint="@color/fillPrimary"
         app:cardCornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -151,7 +151,7 @@
             android:layout_width="160dp"
             android:layout_height="150dp"
             android:layout_marginStart="40dp"
-            android:backgroundTint="@color/teal_200"
+            android:backgroundTint="@color/green"
             app:cardCornerRadius="20dp">
 
             <LinearLayout

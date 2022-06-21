@@ -7,6 +7,8 @@ import androidx.core.content.ContextCompat;
 import android.content.Context;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+
+import android.content.res.ColorStateList;
 import android.widget.LinearLayout.LayoutParams;
 
 import android.graphics.Color;
@@ -74,7 +76,6 @@ public class ViewNotice extends AppCompatActivity {
             if (task.isSuccess()) {
                 MongoCursor<Document> results = task.get();
                 // iterate over and print the results to the log
-                Log.v("EXAMPLE", "successfully aggregated the documents. Results:");
                 while (results.hasNext()) {
                     if (i[0] < 10) {
                         Document NoticeData = results.next();
@@ -89,7 +90,6 @@ public class ViewNotice extends AppCompatActivity {
                         }));
                         thread.start();
                         thread.setPriority(Thread.MAX_PRIORITY);
-                        Log.v("EXAMPLE", NoticeData.toString() + " " + i[0]);
                         i[0]++;
                     }
                     else {
@@ -97,22 +97,18 @@ public class ViewNotice extends AppCompatActivity {
                     }
                 }
             } else {
-                Log.e("EXAMPLE", "failed to aggregate documents with: ",
-                      task.getError());
+                Log.e("EXAMPLE", "failed to aggregate documents with: ", task.getError());
             }
         });
     }
 
     private CardView createCard(String title, String content, String category, Date date) {
-        DateFormat dateFormat = new SimpleDateFormat("dd-mm-yyyy hh:mm:ss");
-        String strDate = dateFormat.format(date);
-        Log.v("date", "" + strDate);
-        int color = R.color.primary;
+        int fillColor = R.color.primary;
         if (category.equals("Placement")) {
-            color = R.color.teal_700;
+            fillColor = R.color.green;
         }
         else if (category.equals("Important")) {
-            color = R.color.red;
+            fillColor = R.color.red;
         }
 
         // Notice Card
@@ -160,7 +156,7 @@ public class ViewNotice extends AppCompatActivity {
         );
         dateParams.setMargins(20, 5, 20, 15);
         dateTV.setLayoutParams(dateParams);
-        dateTV.setText(strDate);
+        dateTV.setText(date.toString());
         dateTV.setTextColor(Color.DKGRAY);
         dateTV.setTextSize(12);
         dateTV.setTypeface(null, Typeface.NORMAL);
@@ -186,7 +182,7 @@ public class ViewNotice extends AppCompatActivity {
         );
         chipParams.setMargins(20, 15, 20, 15);
         categoryChip.setLayoutParams(chipParams);
-        categoryChip.setChipBackgroundColorResource(color);
+        categoryChip.setChipBackgroundColorResource(fillColor);
         categoryChip.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.white));
         categoryChip.setText(category);
 

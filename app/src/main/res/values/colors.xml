@@ -5,6 +5,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="red">#ff6666</color>
-    <color name="colorgreen">#96c896</color>
+    <color name="green">#00d1b2</color>
     <color name="primary">#042652</color>
+    <color name="fillPrimary">#cee2fd</color>
 </resources>
